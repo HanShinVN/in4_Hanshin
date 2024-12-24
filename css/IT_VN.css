@@ -13,7 +13,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/img/br.png') no-repeat center center fixed;
+    background: url('https://cdn.discordapp.com/attachments/1290501522710466602/1321046202686509147/br.png?ex=676bcfa6&is=676a7e26&hm=0b8aac49655873d9e582cb230276470b91d9ec1f22cf93e810cb1e980f374887&') no-repeat center center fixed;
     background-size: cover;
     filter: blur(10px); /* Độ mờ của nền */
     z-index: -1; /* Đặt nền nằm phía sau nội dung */
