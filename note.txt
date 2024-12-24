@@ -1,0 +1,15 @@
+ssh -R <your-subdomain>:80:localhost:<port> serveo.net
+
+
+ Cách sử dụng subdomain cố định
+
+ssh -R mydomain:80:localhost:8080 serveo.net
+
+
+
+
+
+
+ Cách sử dụng không cần subdomain cố định
+
+ ssh -R 80:localhost:8080 serveo.net

@@ -1,0 +1,145 @@
+/* CSS Styles */
+body {
+    margin: 0;
+    font-family: "Courier New", Courier, monospace;
+    background: #000;
+    color: #0affef;
+    overflow: hidden;
+    position: relative;
+}
+
+.header {
+    background: rgba(15, 15, 15, 0.95);
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #0affef;
+    box-shadow: 0 4px 10px rgba(10, 255, 239, 0.3);
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #0affef;
+    text-shadow: 0 0 10px #0affef, 0 0 20px #00ffff, 0 0 30px #00cccc;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #0affef;
+    margin-bottom: 10px;
+    box-shadow: 0 0 15px #0affef, 0 0 30px #00ffff, 0 0 45px #00cccc;
+}
+
+.about-me, .additional-info, .projects, .socials {
+    margin-bottom: 20px;
+    background: rgba(10, 10, 10, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(10, 255, 239, 0.3), 0 0 20px rgba(0, 204, 204, 0.3);
+    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.about-me:hover, .additional-info:hover, .projects:hover, .socials:hover {
+    box-shadow: 0 0 15px rgba(10, 255, 239, 0.6), 0 0 30px rgba(0, 204, 204, 0.6);
+    transform: scale(1.05);
+}
+
+.about-me h3, .additional-info h3, .projects h3, .socials h3 {
+    border-bottom: 1px solid #0affef;
+    padding-bottom: 5px;
+    text-shadow: 0 0 10px #0affef;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    color: #00ffee;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.button a {
+    text-decoration: none;
+    color: #000;
+    background: linear-gradient(135deg, #0affef, #00cccc);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px #0affef;
+}
+
+.button a:hover {
+    background: linear-gradient(135deg, #00cccc, #00a3a3);
+    box-shadow: 0 0 25px #00cccc, 0 0 35px #00a3a3;
+}
+
+.socials div a {
+    margin-right: 10px;
+    color: #0affef;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.socials div a:hover {
+    color: #00cccc;
+    text-shadow: 0 0 10px #00cccc, 0 0 20px #008080;
+}
+
+.footer {
+    background: rgba(15, 15, 15, 0.95);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top: 2px solid #0affef;
+    box-shadow: 0 -4px 10px rgba(10, 255, 239, 0.3);
+}
+
+.footer p {
+    margin: 0;
+    color: #0affef;
+    font-size: 0.9rem;
+    text-shadow: 0 0 10px #0affef;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: transparent;
+    pointer-events: none;
+}
+
+/* Animation Keyframes */
+@keyframes pixelFall {
+    from {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}

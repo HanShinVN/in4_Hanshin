@@ -1,0 +1,300 @@
+body {
+    margin: 0;
+    font-family: "Roboto", "Arial", sans-serif;
+    color: #0affef;
+    overflow: auto;
+    position: relative;
+}
+
+/* Lớp phủ nền */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/img/br.png') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(10px); /* Độ mờ của nền */
+    z-index: -1; /* Đặt nền nằm phía sau nội dung */
+}
+
+.header {
+    background: rgba(15, 15, 15, 0.95);
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #0affef;
+    box-shadow: 0 4px 10px rgba(10, 255, 239, 0.3);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #0affef;
+    text-shadow: 0 0 10px #0affef, 0 0 20px #00ffff, 0 0 30px #00cccc;
+}
+
+.header-photo {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+    margin: 0 10px; /* Adjust the spacing as needed */
+    border-radius: 50%; /* Optional: make the photos circular */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: add a shadow */
+}
+
+
+
+.about-me-container {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: flex-start; /* Căn trái bên trong container */
+    margin: 20px 0;
+    padding-left: 15%; /* Đẩy cả ảnh và nội dung sang phải */
+}
+
+.about-me-card {
+    width: 60%; /* Nội dung chiếm 60% */
+    padding: 20px;
+    background: rgba(15, 15, 15, 0.95);
+    border: 1px solid #0affef;
+    box-shadow: 0 4px 10px rgba(10, 255, 239, 0.3);
+    color: #0affef;
+}
+
+.about-me-image {
+    width: 10%; /* Kích thước ảnh */
+    margin-right: 5%; /* Khoảng cách giữa ảnh và nội dung */
+    border-radius: 10px; /* Bo tròn góc ảnh */
+    text-align: center;
+    margin-bottom: 30px;
+    animation: glowing-effect 2s infinite alternate; /* Thêm animation */
+
+    /* Dùng box-shadow động */
+    box-shadow: 0 0 15px #0affef, 0 0 30px #00ffff, 0 0 px #00cccc;
+}
+
+/* Định nghĩa animation */
+@keyframes glowing-effect {
+    0% {
+        box-shadow: 0 0 10px #330aff, 0 0 20px #00cccc, 0 0 5px #007777;
+    }
+    50% {
+        box-shadow: 0 0 20px #330aff, 0 0 40px #00ffff, 0 0 10px #00cccc;
+    }
+    100% {
+        box-shadow: 0 0 15px #330aff, 0 0 30px #00ffff, 0 0 5px #00cccc;
+    }
+}
+
+
+
+
+
+.main-content {
+    padding: 20px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #0affef;
+    margin-bottom: 10px;
+    box-shadow: 0 0 15px #0affef, 0 0 30px #00ffff, 0 0 45px #00cccc;
+}
+
+.about-me, .additional-info, .projects {
+    margin-bottom: 20px;
+    background: rgba(10, 10, 10, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    padding: 20px;
+}
+
+.about-me:hover, .additional-info:hover, .projects:hover {
+    transform: translateZ(30px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.6);
+}
+
+.socials {
+    margin-bottom: 20px;
+}
+
+.about-me h3, .additional-info h3, .projects h3, .socials h3 {
+    border-bottom: 1px solid #0affef;
+    padding-bottom: 5px;
+    text-shadow: 0 0 10px #0affef;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    color: #00ffee;
+    font-family: "Fira Mono", monospace; /* Use Fira Mono font */
+}
+
+.button a {
+    text-decoration: none;
+    color: #000;
+    background: linear-gradient(135deg, #0affef, #00cccc);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px #0affef;
+}
+
+.button a:hover {
+    background: linear-gradient(135deg, #00cccc, #00a3a3);
+    box-shadow: 0 0 25px #00cccc, 0 0 35px #00a3a3;
+}
+
+.socials div a {
+    margin-right: 10px;
+    color: #0affef;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.socials div a:hover {
+    color: #00cccc;
+    text-shadow: 0 0 10px #00cccc, 0 0 20px #008080;
+}
+
+.footer {
+    background: rgba(15, 15, 15, 0.95);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top: 2px solid #0affef;
+    box-shadow: 0 -4px 10px rgba(10, 255, 239, 0.3);
+}
+
+.footer p {
+    margin: 0;
+    color: #0affef;
+    font-size: 0.9rem;
+    text-shadow: 0 0 10px #0affef;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: transparent;
+    pointer-events: none;
+}
+
+/* Animation Keyframes */
+@keyframes pixelFall {
+    from {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body.loaded #intro {
+    display: none;
+}
+body.loaded #intro {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(0vw); /* Bắt đầu ngoài mép trái màn hình */
+    }
+    100% {
+        transform: translateX(100vw); /* Kết thúc ngoài mép phải màn hình */
+    }
+}
+
+#moving-gif {
+    position: fixed;
+    bottom: 20px; /* Điều chỉnh vị trí dọc */
+    left: 0;
+    width: 70px; /* Kích thước chiều rộng nhỏ hơn */
+    height: auto; /* Tự động điều chỉnh chiều cao theo tỷ lệ */
+    animation: moveLeftToRight 10s linear infinite; /* 10s được chọn làm mặc định */
+    z-index: 10; /* Hiển thị trên cùng */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header-photo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .about-me, .additional-info, .projects {
+        padding: 10px;
+    }
+
+    .button a {
+        padding: 8px 16px;
+    }
+
+    .socials div a {
+        font-size: 1rem;
+    }
+}

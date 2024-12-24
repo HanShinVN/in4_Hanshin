@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHIN_NÈ Hello World</title>
+    <link rel="stylesheet" href="css/IT_VN.css">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+    <style>
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(15, 15, 15, 0.95);
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            border-top: 2px solid #0affef;
+            box-shadow: 0 -4px 10px rgba(10, 255, 239, 0.3);
+        }
+    </style>
+    <script>
+        window.addEventListener("resize", adjustAnimationSpeed);
+      
+        function adjustAnimationSpeed() {
+          const gif = document.querySelector("#moving-gif");
+          const screenWidth = window.innerWidth;
+          const speed = screenWidth / 100;
+          gif.style.animationDuration = `${speed}s`;
+        }
+      
+        adjustAnimationSpeed();
+    </script>
+      
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const videos = ["img/intro1.mp4", "img/intro2.mp4"];
+            const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+            const videoElement = document.getElementById("intro-video");
+            videoElement.src = randomVideo;
+        });
+    </script>
+</head>
+<body>
+    <div class="background"></div>
+    <div id="intro" class="intro-animation">
+        <video autoplay muted playsinline loop id="intro-video">
+            <source src="img/intro1.mp4" type="video/mp4">
+        </video>
+    </div>
+    <header class="header">
+        <div class="header-content">
+            <img src="img/chill_L.png" alt="Left Photo" class="header-photo">
+            <h1>Welcome to penthouse from SHIN_NÈ</h1>
+            <img src="img/chill_R.png" alt="Right Photo" class="header-photo">
+        </div>
+    </header>
+    <main class="main-content">
+        <img src="img/b04.gif" alt="Moving GIF" id="moving-gif">
+        <div class="profile">
+            <img src="img/2.jpg" alt="Profile Picture" class="profile-pic">
+            <h2>HI! My name's Trường nè</h2>
+        </div>
+        <div class="about-me-container">
+            <img src="img/img1.jpg" alt="About Me Image" class="about-me-image">
+            <section class="about-me">
+                <h3>WHO I AM ?</h3>
+                <p>Results-oriented Engineering Executive with a proven track record of optimizing project outcomes.</p>
+                <p>Skilled in strategic project management and team leadership.</p>
+                <p>Seeking a challenging executive role to leverage technical expertise and drive engineering excellence.</p>
+            </section>
+        </div>
+        <section class="additional-info">
+            <h3>INFORMATION</h3>
+            <ul>
+                <li><strong>LOCATION: </strong> Vinhomes Grand Park, Long Thanh My Ward, District 9, Thu Duc City.</li>
+                <li><strong>PHONE: </strong>082 669 6369</li>
+                <li><strong>EMAIL: </strong>lephamductruong69@gmail.com</li>
+            </ul>
+        </section>
+
+        <section class="additional-info">
+            <h3>EDUCATION</h3>
+            <ul>
+                <li>FPT University HCM </li>
+                <li><strong>GPA: 8.0</strong></li>
+                <li>Bachelor's degree in Artificial Intelligence Engineering</li>
+                <li>In-depth study of building AI processing models:</li>
+                <li>       + Natural Language Processing (NLP)</li>
+                <li>       + Image processing (CPV)</li>
+            </ul>
+        </section>
+
+        <section class="additional-info">
+            <h3>WORK EXPERIENCE</h3>
+            <ul>
+                <li><strong>FPT Software HCM</strong> - AI INTERN</li>
+            </ul>
+        </section>
+
+
+
+
+        <section class="projects">
+            <h3>Project in CLASS </h3>
+            <ul>
+                <li><strong>Model for recognizing human emotions and gender.</strong></li>
+                <li><strong>Brain cancer classification model.</strong></li>
+            </ul>
+        </section>
+
+
+        <section class="projects">
+            <h3>Graduation Project  </h3>
+            <ul>
+                <li><strong>Applied AI for Society - Human Multi-tracking System.</strong></li>
+            </ul>
+        </section>
+
+
+        <section class="projects">
+            <h3>Project in BUSINESS </h3>
+            <ul>
+                <li><strong>Automatic motorbike and car parking system</strong></li>
+            </ul>
+        </section>
+
+
+
+
+
+
+
+
+        <div class="button">
+            <a href="#">Xem thêm về tôi</a>
+        </div>
+        <section class="socials">
+            <h3>Liên hệ với tôi</h3>
+            <div>
+                <a href="https://fb.com/tuitenlabinne" title="Facebook" class="social-link">Facebook</a>
+                <a href="https://www.tiktok.com/@hanshin_vn" title="TIKTOK" class="social-link">TIKTOK</a>
+                <a href="https://www.youtube.com/@ductruongentertaiment9923" title="YOUTUBE" class="social-link">YOUTUBE</a>
+            </div></br></br>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 LeeHanShin. All rights reserved.</p>
+    </footer>
+    <script src="js/IT_VN.js"></script>
+</body>
+</html>
